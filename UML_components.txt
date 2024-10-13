@@ -1,0 +1,54 @@
+Buildings Component - Composite
+Component - city 
+Composite - compositeBuildings
+leafs - Residential,Commercial,Industrial, Landmarks ( has derived classes)
+
+Utilities Component - Decorator
+Component - city 
+Decorator - Utilities
+ConcreteDecorator - PowerPlants, WaterSupply, WasteManagement, SewageSystems
+
+Transportation Component - Strategy 
+context - Citizen 
+Strategy -TransportStrategy
+ConcreteStrategy - ModeOfTransport derived classes - PublicTransport, PrivateTransport (both have derived classes)
+
+State 
+context - ModeofTransport
+State -TransportationState
+ConcreteState - PublicTransportState , PrivateTransportState (both have derived classes)
+
+Citizens Component - observer 
+subject - Government 
+concreteSubject - ...
+Observer - Citizen 
+
+Chain of responsibility 
+client - citizen 
+handler - PublicServices
+concreteHandler - education, lawEnforcement, healthCare 
+
+
+Resources Component - flyweight 
+flyweight - resources 
+concreteflyweight - Materials, Energy, Water, Budget
+flyweightFactory -resourcesFactory 
+client - city 
+
+City Growth Component - builder 
+director - director 
+builder - builder 
+concreteBuilder - cityBuilding
+product - compositeBuilder
+client -
+
+
+other patterns used 
+adapter 
+adaptee - compositeBuilding
+adapter - adapter 
+target - cityTarget 
+
+
+
+
